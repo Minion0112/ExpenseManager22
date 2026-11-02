@@ -258,18 +258,3 @@ MONGO_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/expense
   ```
 
 ---
-
-## 8. College Viva / Practical Evaluation Q&A
-
-1. **Why use Express middleware like `express.json()`?**
-   By default, Node.js receives HTTP request bodies as raw data streams. `express.json()` parses incoming payloads with JSON Content-Type and populates `req.body` with JavaScript objects.
-
-2. **Why use Mongoose rather than the native MongoDB driver?**
-   Mongoose provides schema validation, type casting, default values, and lifecycle hooks at the application level, ensuring data consistency in an otherwise schema-less database.
-
-3. **What is the difference between `PUT` and `POST`?**
-   - `POST` creates a new resource and is typically non-idempotent.
-   - `PUT` updates an existing resource identified by a specific ID and is idempotent.
-
-4. **Why are environment variables used instead of hardcoding credentials?**
-   Hardcoding credentials in source code creates severe security vulnerabilities if the code is published to GitHub. Using `.env` keeps passwords on the local machine and out of version control.
